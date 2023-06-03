@@ -20,11 +20,11 @@ node {
             sh './deployment/deploy_prod.sh'
 
         stage 'Publish results'
-            slackSend color: "good", message: "Build successful: `$` <Open in Jenkins>"
+            slackSend color: "good", message: "Build successful:  <Open in Jenkins>"
     }
 
     catch (err) {
-        slackSend color: "danger", message: "Build failed :face_with_head_bandage: \n|Open in Jenkins>"
+        slackSend color: "danger", message: "Build failed :face_with_head_bandage: Open in Jenkins>"
 
         throw err
     }
