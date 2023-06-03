@@ -23,10 +23,10 @@ node {
             slackSend color: "good", message: "Build successful:  <Open in Jenkins>"
     }
 
-    catch (err) {
-        slackSend color: "danger", message: "Build failed :face_with_head_bandage: Open in Jenkins>"
+    // catch (err) {
+    //     slackSend color: "danger", message: "Build failed :face_with_head_bandage: Open in Jenkins>"
 
-        throw err
-    }
+    //     throw err
+    // }
 
 }
